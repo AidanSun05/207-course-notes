@@ -13,17 +13,14 @@ public class Rectangle {
 
     /**
      * scales the rectangle
-     * @param factor
+     * @param factor The scale factor to multiply by
      */
     public void scale(double factor) {
-      width = width * factor;
-      height = height * factor;
+      width *= factor;
+      height *= factor;
     }
 
     public boolean isLargerThan(Rectangle other){
-        if(area() > other.area())
-            return true;
-        else
-            return false;
+        return area() > other.area();
     }
 }
